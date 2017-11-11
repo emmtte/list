@@ -13,7 +13,7 @@ Roadmap
 
 Donate
 ======
-Cryptocurrency-Portfolio is an open source side project. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Pivx.
+Cryptocurrency-Portfolio is an open source side project. This project is a work in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Pivx.
 
 Bitcoin : 
 Ethereum : 
