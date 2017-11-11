@@ -3,21 +3,33 @@ Automatic creation a Google Sheet with Google Apps Script (GAS) for a Cryptocurr
 
 Features
 ========
-Script Use 
-
+This script create a google sheet with balances from differents broker as
+* Binance
+* Bittrex
+* Cryptopia
+* Kraken
+It takes too prices from coinmarketcap
 
 Roadmap
 =======
-* History correction
-* Add Poloniex
+* Add History
+* Add Withdrawal
+* Add Deposit
+* Add Poloniex API
+* Add Kucoin API
 
 Donate
 ======
 Cryptocurrency-Portfolio is an open source side project. This project is a work in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Pivx.
 
 Bitcoin : 
+
 Ethereum : 
+
 Litecoin :
+
+Monero :
+
 Pivx :
 
 License
