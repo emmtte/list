@@ -1,14 +1,15 @@
 # Cryptocurrency-Portfolio
-Automatic creation a Google Sheet with Google Apps Script (GAS) for a Cryptocurrency Portfolio
+Google Sheet's automatic creation with Google Apps Script (GAS) for a portfolio
 
 Features
 ========
-This script create a google sheet with balances from differents broker as
+This script create a google sheet with currencies balances extracted from differents broker as
 * Binance
 * Bittrex
 * Cryptopia
 * Kraken
-It takes too prices from coinmarketcap
+
+It also gives prices from Coinmarketcap
 
 Roadmap
 =======
@@ -20,7 +21,7 @@ Roadmap
 
 Donate
 ======
-Cryptocurrency-Portfolio is an open source side project. This project is a work in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Pivx.
+Cryptocurrency-Portfolio is an open source project. This project is still in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Pivx.
 
 Bitcoin : 
 
