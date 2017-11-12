@@ -21,7 +21,7 @@ Roadmap
 
 Donate
 ======
-Cryptocurrency-Portfolio is an open source project. This project is still in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Pivx.
+Cryptocurrency-Portfolio is an open source project. This project is still in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Dash.
 
 Bitcoin : 12syztqo8HsvmrXFMJovpPKk5p7GhuLDkX
 
