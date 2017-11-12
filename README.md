@@ -23,15 +23,13 @@ Donate
 ======
 Cryptocurrency-Portfolio is an open source project. This project is still in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Pivx.
 
-Bitcoin : 
+Bitcoin : 12syztqo8HsvmrXFMJovpPKk5p7GhuLDkX
 
-Ethereum : 
+Ethereum : 0xdea14f3a96d88e34b31ba7d0eb11d5dd7b3818b8
 
-Litecoin :
+Litecoin : Lgoz4XUzUiQDAeZHKhNYVv4Yt4CkhB3dVx
 
-Monero :
-
-Pivx :
+Dash : XyXSG76aEqjBfn1fcFqbv3ypbMFYHLhFgW
 
 License
 =======
