@@ -45,6 +45,7 @@ Cryptocurrency-Portfolio is an open source project. This project is still in pro
 * Ethereum : 0xdea14f3a96d88e34b31ba7d0eb11d5dd7b3818b8
 * Litecoin : Lgoz4XUzUiQDAeZHKhNYVv4Yt4CkhB3dVx
 * Dash : XyXSG76aEqjBfn1fcFqbv3ypbMFYHLhFgW
+* Zcash : t1ghGhATN4foYCGdhHFeZE7vULdpWEuvp1N
 
 License
 =======
