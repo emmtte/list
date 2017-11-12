@@ -19,6 +19,31 @@ Roadmap
 * Add Poloniex API
 * Add Kucoin API
 
+Installation
+============
+Go to Google Drive and click New > More > Google Apps Script
+
+https://drive.google.com/drive/my-drive
+
+Create a new Google script , click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
+
+You need to create with File > New > Script file
+
+Create a new file too and copy the content of:
+
+https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
+
+Add Google Sheet API, click Ressources > Advanced Google Services... (menus inside the script editor). Then search for the Google Sheet API and select ON
+
+The message "These services must also be enabled in the Google API Console" click on the link and search for sheet and enable Google Sheets API
+
+Create a New Spreadsheet and copy the ID into config.gs
+
+Edit config.gs with your API keys 
+
+Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
+
+
 Donate
 ======
 Cryptocurrency-Portfolio is an open source project. This project is still in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Dash.
