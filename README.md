@@ -21,40 +21,36 @@ Roadmap
 
 Installation
 ============
-Go to Google Drive and click New > More > Google Apps Script
+1. Go to Google Drive and click New > More > Google Apps Script
 
 https://drive.google.com/drive/my-drive
 
-Create a new Google script , click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
+2. Create a new Google script , click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
 
 You need to create with File > New > Script file
 
-Create a new file too and copy the content of:
+Create a new file jsSHA and copy the content from
 
 https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
 
-Add Google Sheet API, click Ressources > Advanced Google Services... (menus inside the script editor). Then search for the Google Sheet API and select ON
+3. Add Google Sheet API, click Ressources > Advanced Google Services... (menus inside the script editor). Then search for the Google Sheet API and select ON
 
 The message "These services must also be enabled in the Google API Console" click on the link and search for sheet and enable Google Sheets API
 
-Create a New Spreadsheet and copy the ID into config.gs
+4. Create a New Spreadsheet and copy the ID into config.gs
 
 Edit config.gs with your API keys 
 
-Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
-
+5. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
 
 Donate
 ======
 Cryptocurrency-Portfolio is an open source project. This project is still in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Dash.
 
-Bitcoin : 12syztqo8HsvmrXFMJovpPKk5p7GhuLDkX
-
-Ethereum : 0xdea14f3a96d88e34b31ba7d0eb11d5dd7b3818b8
-
-Litecoin : Lgoz4XUzUiQDAeZHKhNYVv4Yt4CkhB3dVx
-
-Dash : XyXSG76aEqjBfn1fcFqbv3ypbMFYHLhFgW
+* Bitcoin : 12syztqo8HsvmrXFMJovpPKk5p7GhuLDkX
+* Ethereum : 0xdea14f3a96d88e34b31ba7d0eb11d5dd7b3818b8
+* Litecoin : Lgoz4XUzUiQDAeZHKhNYVv4Yt4CkhB3dVx
+* Dash : XyXSG76aEqjBfn1fcFqbv3ypbMFYHLhFgW
 
 License
 =======
