@@ -11,15 +11,7 @@ This script create a google sheet with currencies balances extracted from differ
 
 It also gives prices from Coinmarketcap
 
-Roadmap
-=======
-* Add History
-* Add Withdrawal
-* Add Deposit
-* Add Poloniex API
-* Add Kucoin API
-
-Installation
+Configuration
 ============
 1. Go to Google Drive and click New > More > Google Apps Script
 https://drive.google.com/drive/my-drive
@@ -36,6 +28,14 @@ The message "These services must also be enabled in the Google API Console" clic
 Edit config.gs with your API keys 
 
 5. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
+
+Roadmap
+=======
+* Add History
+* Add Withdrawal
+* Add Deposit
+* Add Poloniex API
+* Add Kucoin API
 
 Donate
 ======
