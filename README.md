@@ -23,16 +23,16 @@ Configuration
 
 3. In "Config" paste your key and secret API
 
-|  API  | Key | Secret |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-| Binance    |B14|B15|
-| Bittrex    |B6|B7|
-| Cryptopia  |B18|B19|
-| Kraken     |B2|B3|
-| Kucoin     |B22|B23|
-| Poloniex   |||
+|  API          | Key           | Secret |
+| ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  |  |
+| Content Cell  | Content Cell  |  |
+| Binance    | B14 | B15 |
+| Bittrex    | B6  | B7  |
+| Cryptopia  | B18 | B19 |
+| Kraken     | B2  | B3  |
+| Kucoin     | B22 | B23 |
+| Poloniex   |     |     |
 
 
 4. Click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
