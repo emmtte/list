@@ -23,10 +23,8 @@ Configuration
 
 3. In "Config" paste your key and secret API
 
-|  API          | Key           | Secret |
-| ------------- | ------------- | ------------- |
-| Content Cell  | Content Cell  |  |
-| Content Cell  | Content Cell  |  |
+|  API       | Key | Secret |
+| ---------- | --- | ----|
 | Binance    | B14 | B15 |
 | Bittrex    | B6  | B7  |
 | Cryptopia  | B18 | B19 |
