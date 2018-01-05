@@ -17,8 +17,20 @@ Configuration
 ============
 1. Go to Google Drive and click New > Google Sheets
 
-https://drive.google.com/drive/my-drive
+  https://drive.google.com/drive/my-drive
 
+2. Rename tow first sheets with <<Market>> and <<Config>>
+
+3. In <<Config>> paste your key and secret API
+
+  | API        | Key | Secret |
+  | Binance    |||
+  | Bittrex    |||
+  | Cryptopia  |||
+  | Kraken     |||
+  | Kucoin     |||
+  | Poloniex   |||
+  
 2. Click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
 You need to create with File > New > Script file
 Create a new file jsSHA and copy the content from
