@@ -15,10 +15,11 @@ It also gives prices from Coinmarketcap
 
 Configuration
 ============
-1. Go to Google Drive and click New > More > Google Apps Script
+1. Go to Google Drive and click New > Google Sheets
+
 https://drive.google.com/drive/my-drive
 
-2. Create a new Google Sheets then click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
+2. Click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
 You need to create with File > New > Script file
 Create a new file jsSHA and copy the content from
 https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
