@@ -19,9 +19,9 @@ Configuration
 
   https://drive.google.com/drive/my-drive
 
-2. Rename two first sheets with "Market" and "Config"
+2. Rename two first tab with "Market" and "Config"
 
-3. In "Config" paste your key and secret API
+3. In "Config" tab paste your API key and API secret in cells followint next table 
 
 |  API       | Key | Secret |
 | ---------- | --- | ----|
