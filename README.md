@@ -19,18 +19,18 @@ Configuration
 
   https://drive.google.com/drive/my-drive
 
-2. Rename tow first sheets with <Market> and <Config>
+2. Rename two first sheets with "Market" and "Config"
 
-3. In <Config> paste your key and secret API
+3. In "Config" paste your key and secret API
 
-  | API        | Key | Secret |
-  | --- | --- |
-  | Binance    |B14|B15|
-  | Bittrex    |B6|B7|
-  | Cryptopia  |B18|B19|
-  | Kraken     |B2|B3|
-  | Kucoin     |B22|B23|
-  | Poloniex   |||
+| API        | Key | Secret |
+| --- | --- |
+| Binance    |B14|B15|
+| Bittrex    |B6|B7|
+| Cryptopia  |B18|B19|
+| Kraken     |B2|B3|
+| Kucoin     |B22|B23|
+| Poloniex   |||
   
 2. Click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
 You need to create with File > New > Script file
