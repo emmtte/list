@@ -23,12 +23,10 @@ Configuration
 
 3. In "Config" paste your key and secret API
 
-| First Header  | Second Header |
+|  API  | Key | Secret |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
-| API        | Key | Secret |
-| --- | --- |
 | Binance    |B14|B15|
 | Bittrex    |B6|B7|
 | Cryptopia  |B18|B19|
@@ -78,8 +76,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
