@@ -4,10 +4,12 @@ Google Sheet's automatic creation with Google Apps Script (GAS) for a portfolio
 Features
 ========
 This script create a google sheet with currencies balances extracted from differents broker as
+
 * Binance
 * Bittrex
 * Cryptopia
 * Kraken
+* Kucoin
 
 It also gives prices from Coinmarketcap
 
@@ -16,26 +18,12 @@ Configuration
 1. Go to Google Drive and click New > More > Google Apps Script
 https://drive.google.com/drive/my-drive
 
-2. Create a new Google script , click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
+2. Create a new Google Sheets then click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
 You need to create with File > New > Script file
 Create a new file jsSHA and copy the content from
 https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
 
-3. Add Google Sheet API, click Ressources > Advanced Google Services... (menus inside the script editor). Then search for the Google Sheet API and select ON
-The message "These services must also be enabled in the Google API Console" click on the link and search for sheet and enable Google Sheets API
-
-4. Create a New Spreadsheet and copy the ID into config.gs
-Edit config.gs with your API keys 
-
-5. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
-
-Roadmap
-=======
-* Add History
-* Add Withdrawal
-* Add Deposit
-* Add Poloniex API
-* Add Kucoin API
+3. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
 
 Donate
 ======
@@ -52,7 +40,7 @@ License
 
 MIT License
 
-Copyright (c) 2017 Emmanuel CHARETTE
+Copyright (c) 2018 Emmanuel CHARETTE
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
