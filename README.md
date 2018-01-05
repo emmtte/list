@@ -23,6 +23,7 @@ Configuration
 
 3. In "Config" paste your key and secret API
 
+
 | API        | Key | Secret |
 | --- | --- |
 | Binance    |B14|B15|
@@ -31,13 +32,14 @@ Configuration
 | Kraken     |B2|B3|
 | Kucoin     |B22|B23|
 | Poloniex   |||
-  
-2. Click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
+
+
+4. Click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
 You need to create with File > New > Script file
 Create a new file jsSHA and copy the content from
 https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
 
-3. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
+5. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
 
 Donate
 ======
