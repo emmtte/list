@@ -23,7 +23,10 @@ Configuration
 
 3. In "Config" paste your key and secret API
 
-
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 | API        | Key | Secret |
 | --- | --- |
 | Binance    |B14|B15|
