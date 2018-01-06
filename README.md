@@ -21,7 +21,7 @@ Configuration
 
 2. Rename two first tab with "Market" and "Config"
 
-3. In "Config" tab paste your API key and API secret in cells followint next table 
+3. In "Config" tab paste your API key and API secret in cells following next table 
 
 |  API       | Key | Secret |
 | ---------- | --- | ----|
