@@ -55,7 +55,7 @@ License
 
 MIT License
 
-Copyright (c) 2018 Emmanuel CHARETTE
+Copyright (c) August 2017 Emmanuel CHARETTE
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
