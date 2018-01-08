@@ -8,8 +8,12 @@ function BinanceBalance () {
      //var nonce = Math.floor(new Date().getTime()/1000)    
     var nonce = new Date () * 1;
     var postdata = "timestamp=" + nonce 
-    var signature = BinanceSignature (secret, postdata);
     
+    var shaObj = new jsSHA("SHA-256", "TEXT");
+    shaObj.setHMACKey(secret, "TEXT");
+    shaObj.update(postdata);
+    var signature = shaObj.getHMAC("HEX");
+       
     var path = "/api/v3/account?" + postdata + "&signature=" + signature;
     var url = "https://www.binance.com" + path;
     var options = {
