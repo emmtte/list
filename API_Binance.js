@@ -1,6 +1,6 @@
 // I assume that key and secret API are in the "Config" spreadsheet. The key is in cell B14 and the secret in cell B15
 
-function BinanceBalance () {
+function Binance () {
      var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Config");
      var key = sheet.getRange("B14").getValue()
      var secret = sheet.getRange("B15").getValue();
