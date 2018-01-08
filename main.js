@@ -63,8 +63,6 @@ function Balance(data){
   var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Market");
   TotalAllEUR = 0; TotalCoinEUR = 0; Top5 = 0; Top30 = 0; Top200 = 0
   ss.setFrozenRows(9);
-  ss.clearContents();
-  ss.clearNotes();
   ss.getRange('A10:T100').clearContent();
   ss.getRange('A10:T100').clearNote();
   
