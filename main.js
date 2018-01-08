@@ -1,3 +1,11 @@
+function onOpen() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet();
+  var entries = [{ name : "Update Portfolio", functionName : "Balance" }];
+  sheet.addMenu("Cryptos Tools", entries);
+};
+
+
+
 function searchcoin(symbol, myArray) {
   var err= {symbol: symbol, name: "???????", rank: "-", market_cap_eur: "0",price_btc: "0",price_eur: "0",percent_change_1h: "0",percent_change_24h: "0",percent_change_7d: "0"}
   if (symbol == "BQX") {symbol="ETHOS"}
