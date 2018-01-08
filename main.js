@@ -1,6 +1,4 @@
 function searchcoin(symbol, myArray) {
-  
-  
   var err= {symbol: symbol, name: "???????", rank: "-", market_cap_eur: "0",price_btc: "0",price_eur: "0",percent_change_1h: "0",percent_change_24h: "0",percent_change_7d: "0"}
   if (symbol == "BQX") {symbol="ETHOS"}
   if (symbol == "CMT") {for (var i=0; i < myArray.length; i++) {if (myArray[i].id == "cybermiles") {return myArray[i];}}}
@@ -8,13 +6,9 @@ function searchcoin(symbol, myArray) {
   return err
 }
 
-/* Supprime les doubles des monnaies des différents broker
- * @ Additionne les quantitées d'une monnaie existante
- * chez un autre broker
- */   
+
 
 function AddBalance(Full_Balance, Broker_Balance){
-
 outerloop:
 for (var i = 0; i < Broker_Balance.length; i++) {
  
@@ -32,25 +26,19 @@ return Full_Balance
 }
 
 
-function balnew(data){
-      
+
+function Balance(data){
+     
   var Balance = [];
-  
-  var bittrex_balance = [];
-  var results = bittrexPrivateRequest("account/getbalances");
-  results.forEach(function(result,index) {bittrex_balance.push({'balance': result.Balance, 'currency': result.Currency, 'market': 'Bittrex'})});
-   
-  var Wallet = [];
-  Wallet = LoadWallet();
   
   var market = [];
   market = coinmarketcap()
   
   var all = []
   
-  var Full_Balance = krakenGetbalances()
-  Full_Balance=AddBalance(Full_Balance, bittrex_balance)
-  Full_Balance=AddBalance(Full_Balance, BinanceBalance())
+  var Full_Balance = Kraken()
+  Full_Balance=AddBalance(Full_Balance, Bittrex())
+  Full_Balance=AddBalance(Full_Balance, Binance())
   Full_Balance=AddBalance(Full_Balance, Cryptopia())
   //Logger.log(Full_Balance);
   //Logger.log(all)
@@ -67,8 +55,8 @@ function balnew(data){
   var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Market");
   TotalAllEUR = 0; TotalCoinEUR = 0; Top5 = 0; Top30 = 0; Top200 = 0
   ss.setFrozenRows(9);
-  //ss.clearContents();
-  //ss.clearNotes();
+  ss.clearContents();
+  ss.clearNotes();
   ss.getRange('A10:T100').clearContent();
   ss.getRange('A10:T100').clearNote();
   
@@ -131,66 +119,8 @@ function balnew(data){
       if (coin.rank >= 6 && coin.rank <= 30) {Top30+=TotalCoinEUR}
       if (coin.rank >= 31) {Top200+=TotalCoinEUR}
       TotalAllEUR += TotalCoinEUR
-      
-      // Calcul les +/- values avec les données des Wallet
-            
-      Crypto=SearchWallet(Wallet, coin.symbol) //Currency,Quantity,Price,Price_per_Unit,Market
-      
-     
-      if (bal==parseFloat(Crypto.Quantity)) {
-        
-      // ss.getRange(a,19).setValue(Crypto.Quantity)
-      
-      if (Crypto.Market == 'BTC') {
-           //Prix à l'unitée
-           ss.getRange(a,7).setValue(Crypto.Price_per_Unit*Bitcoin)
-           ss.getRange(a,8).setValue(Crypto.Price_per_Unit)
-           //Prix Global
-           ss.getRange(a,14).setValue(Crypto.Price*Bitcoin)
-           ss.getRange(a,15).setValue(Crypto.Price)
-           
-           CoinPrice=parseFloat(coin.price_btc)
-           gain=(CoinPrice - Crypto.Price_per_Unit)*Crypto.Quantity
-           ss.getRange(a,16).setValue(gain*Bitcoin)
-           ss.getRange(a,17).setValue(gain)
-           purcent=(CoinPrice - Crypto.Price_per_Unit)/Crypto.Price_per_Unit
-           ss.getRange(a,19).setValue(purcent)
-           
-           
-      }
-      
-          if (Crypto.Market == 'EUR') {
-            //Prix à l'unitée
-            ss.getRange(a,7).setValue(Crypto.Price_per_Unit)
-            ss.getRange(a,8).setValue(Crypto.Price_per_Unit/Bitcoin)
-            //Prix Global
-            ss.getRange(a,14).setValue(Crypto.Price)
-            ss.getRange(a,15).setValue(Crypto.Price/Bitcoin)
-            
-           //ss.getRange(a,16).setValue(buy.Price_per_Unit)
-           CoinPrice=parseFloat(coin.price_btc*Bitcoin)
-           gain=(CoinPrice - Crypto.Price_per_Unit)*Crypto.Quantity
-           ss.getRange(a,16).setValue(gain)
-           ss.getRange(a,17).setValue(gain/Bitcoin)
-           purcent=(CoinPrice - Crypto.Price_per_Unit)/Crypto.Price_per_Unit
-           ss.getRange(a,19).setValue(purcent)
-           
-      }
-      }
-      else
-      {ss.getRange(a,19).setValue("#ERROR");
-       ss.getRange(a,19).setNotes([["Balance : "+bal+"\nBuy/Sell : "+Crypto.Quantity+"\n"+msg]])
-      }
-
-//ss.getRange(a,18).setFormula('=sparkline(N'+a+',{"charttype","bar"; "color1","purple"; "max",G5})')
-
-
-
 }
 
-//}
-
- 
   
 // Do Strategy and Total
 var Portfolio = [];
