@@ -40,6 +40,14 @@ https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
 
 5. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
 
+Optional
+========
+
+Receive a pdf copy of "Market" sheet every hours or what you want
+Just add an event in script editor with current project's triggers button.
+Run : convertSpreadsheetToPdf() 
+Event : Time-driven
+
 Donate
 ======
 Cryptocurrency-Portfolio is an open source project. This project is still in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Dash.
