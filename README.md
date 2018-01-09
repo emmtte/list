@@ -44,9 +44,9 @@ Optional
 ========
 
 Receive a pdf copy of "Market" sheet every hours or what you want
-Just add an event in script editor with current project's triggers button.
-Run : convertSpreadsheetToPdf() 
-Event : Time-driven
+* Just add an event in script editor with current project's triggers button.
+* Run : convertSpreadsheetToPdf() 
+* Event : Time-driven
 
 Donate
 ======
