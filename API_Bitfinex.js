@@ -36,6 +36,6 @@ function Bitfinex () {
       if (asset=="QSH") {asset="QASH"}
       array.push({'currency': asset, 'balance': balance, 'market': "Bitfinex"})}
     } 
-  }
+  
   return array;
 }
