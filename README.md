@@ -36,8 +36,8 @@ Configuration
 ### Kraken
 https://www.kraken.com/u/settings/api
 * Log in into your Kraken account and navigate to Settings -> API 
-* Create a new key and select in the permissions only Query Ledger Entries and Query Funds
-* Enter the Key in **B2** cell and the Private Key in **B3** cell
+* Create a new key and select in the permissions only Query Funds
+* Enter the Key in **B2** cell and the Private Key in **B3** cell in **"Config"** tab
 
 ### Bittrex
 https://bittrex.com/Manage#sectionApi
@@ -45,34 +45,34 @@ https://bittrex.com/Manage#sectionApi
 * Create a new key
 * Enable only READ INFO
 * Click on Update Keys
-* Enter your Key in **B6** cell and your Secret in **B7** cell 
+* Enter your Key in **B6** cell and your Secret in **B7** cell in **"Config"** tab
 
 ### Poloniex
 https://poloniex.com/apiKeys
 * Log in into your Poloniex account, select the Settings icon and click on API KEYS
-* Please create a new API key for CoinTracking. Do not use an already existing key.
+* Please create a new API key. Do not use an already existing key.
 * Please disable (!!!) both checkboxes Enable Trading and Enable Withdrawals as we do not need them!!!
-* Enter your Key in **B10** and your Secret here in **B11** cell
+* Enter your Key in **B10** and your Secret here in **B11** cell in **"Config"** tab
 
 ### Binance
 https://www.binance.com/userCenter/createApi.html
 * Log in into your Binance account and navigate to the Security Settings page
 * Click on 'API Settings' and create a new key
 * Check only the 'Read Info' permission
-* Enter your Key in **B14** cell and your Secret in **B15** cell
+* Enter your Key in **B14** cell and your Secret in **B15** cell in **"Config"** tab
 
 ### Cryptopia
 https://www.cryptopia.co.nz/Security
 * Log in into your Cryptopia account and navigate to Settings -> Security
 * Check the 'Enable API' checkbox and create a 'New Key'
 * Save the changes
-* Enter your Key in **B18** cell and your Secret in **B19** cell
+* Enter your Key in **B18** cell and your Secret in **B19** cell in **"Config"** tab
 
 ### Kucoin
 https://www.kucoin.com/#/user/setting/api
 * Log in into your KuCoin account and navigate to Settings -> API Keys
 * Click on 'Create'
-* Enter your Key in **B22** cell and your Secret in **B23** cell
+* Enter your Key in **B22** cell and your Secret in **B23** cell in **"Config"** tab
 __Warning:__ KuCoin.com does not provide API permissions. All keys have full access to your funds.
 
 ### Biffinex
@@ -81,7 +81,7 @@ https://www.bitfinex.com/api
 * Create a new key
 * Select all Read boxes (should be selected by default) and do not select any Write boxes.
 * Label the API Key and generate it.
-* Enter your Key in **B26** cell and your Secret in **B27** cell
+* Enter your Key in **B26** cell and your Secret in **B27** cell in **"Config"** tab
 
 Optional
 ========
