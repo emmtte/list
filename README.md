@@ -23,7 +23,7 @@ Configuration
 
 2. Rename two first tab with "Market" and "Config"
 
-3 In "Market" tab typing your total deposit in cell **G5**
+3. In "Market" tab typing your total deposit in cell **G5**
 
 4. In "Config" tab paste your API key and API secret in cells following next table 
 
