@@ -1,6 +1,8 @@
 # Cryptocurrency-Portfolio
 Google Sheet's automatic creation with Google Apps Script (GAS) for a portfolio
 
+![img](sample.png)
+
 Features
 ========
 This script create a google sheet with currencies balances extracted from differents broker as
