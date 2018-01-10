@@ -22,23 +22,16 @@ In future more brokers will be available as
 
 Configuration
 ============
-1. Go to https://drive.google.com/drive/my-drive and click New > Google Sheets
-
-2. Rename two first tab by "Market" and "Config"
-
-3. Click Tools > Script editor...
-Create script file with File > New > Script file
-Copy and paste the contents of ```[main.js](main.js)``` and save.
- 
-4. Create a new file jsSHA.js and copy the content of https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
-
-5 Create new script file for every API you need
-
-7. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
-
-3. In "Market" tab typing your total deposit in cell **G5**
-
-4. In "Config" tab paste your API key and API secret from broker you use (multiple broker allowed)
+* Go to https://drive.google.com/drive/my-drive and click New > Google Sheets
+* Rename two first tab by "Market" and "Config"
+* Click Tools > Script editor...
+  Create script file with File > New > Script file
+  Copy and paste the contents of ```[main.js](main.js)``` and save.
+* Create a new file jsSHA.js and copy the content of https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
+* Create new script file for every API you need
+* Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
+* In "Market" tab typing your total deposit in cell **G5**
+* In "Config" tab paste your API key and API secret from broker you use (multiple broker allowed)
 
 ### Kraken
 * Log in into your Kraken account and navigate to Settings -> API (https://www.kraken.com/u/settings/api)
