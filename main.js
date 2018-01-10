@@ -1,3 +1,20 @@
+//version 0.23
+
+function onOpen() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet();
+  var entries = [{ name : "Update Portfolio", functionName : "Balance" }];
+  sheet.addMenu("Cryptos Tools", entries);
+};
+
+function coinmarketcap() {
+var url = "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=300";
+//var url = "https://api.coinmarketcap.com/v1/ticker/?convert=EUR";
+var response = UrlFetchApp.fetch(url);
+var text = response.getContentText();
+var obj_array = JSON.parse(text);
+return obj_array;
+}
+
 function searchcoin(symbol, myArray) {
   var err= {symbol: symbol, name: "???????", rank: "-", market_cap_eur: "0",price_btc: "0",price_eur: "0",percent_change_1h: "0",percent_change_24h: "0",percent_change_7d: "0"}
   if (symbol == "BQX") {symbol="ETHOS"}
@@ -6,12 +23,9 @@ function searchcoin(symbol, myArray) {
   return err
 }
 
-
-
 function AddBalance(Full_Balance, Broker_Balance){
 outerloop:
 for (var i = 0; i < Broker_Balance.length; i++) {
- 
   for (var j = 0; j < Full_Balance.length; j++) {
     if (Full_Balance[j].currency === Broker_Balance[i].currency){
       //Logger.log(Full_Balance[j].currency+" double");
@@ -26,7 +40,6 @@ return Full_Balance
 }
 
 
-
 function Balance(data){
      
   var Balance = [];
@@ -36,12 +49,15 @@ function Balance(data){
   
   var all = []
   
-  var Full_Balance = Kraken()
-  Full_Balance=AddBalance(Full_Balance, Bittrex())
-  Full_Balance=AddBalance(Full_Balance, Binance())
-  Full_Balance=AddBalance(Full_Balance, Cryptopia())
-  //Logger.log(Full_Balance);
-  //Logger.log(all)
+  var Full_Balance = []
+  var cfg = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Config");
+  if (!cfg.getRange("B2").isBlank()) {Full_Balance=AddBalance(Full_Balance, Kraken())}
+  if (!cfg.getRange("B6").isBlank()) {Full_Balance=AddBalance(Full_Balance, Bittrex())}
+  if (!cfg.getRange("B10").isBlank()) {Full_Balance=AddBalance(Full_Balance, Poloniex())}
+  if (!cfg.getRange("B14").isBlank()) {Full_Balance=AddBalance(Full_Balance, Binance())}
+  if (!cfg.getRange("B18").isBlank()) {Full_Balance=AddBalance(Full_Balance, Cryptopia())}
+  if (!cfg.getRange("B22").isBlank()) {Full_Balance=AddBalance(Full_Balance, Kucoin())}
+  if (!cfg.getRange("B26").isBlank()) {Full_Balance=AddBalance(Full_Balance, Bitfinex())}
   var all = Full_Balance
   
   Bitcoin=searchcoin("BTC",market).price_eur
@@ -146,10 +162,3 @@ ss.getRange(5,13).setValue(earnings/deposit)
 ss.getRange(6,12).setValue((earnings+deposit)/Bitcoin)
 
 }
-
-
-function onOpen() {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet();
-  var entries = [{ name : "Update Portfolio", functionName : "Balance" }];
-  sheet.addMenu("Cryptos Tools", entries);
-};
