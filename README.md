@@ -11,36 +11,77 @@ This script create a google sheet with currencies balances extracted from differ
 * Bittrex
 * Cryptopia
 * Kraken
-* Kucoin
 
 It also gives prices from Coinmarketcap
+
+In future more brokers will be available as
+
+* Kucoin
+* Poloniex
+* Bitfinex
 
 Configuration
 ============
 1. Go to https://drive.google.com/drive/my-drive and click New > Google Sheets
 
-2. Rename two first tab with "Market" and "Config"
+2. Rename two first tab by "Market" and "Config"
+
+3. Click Tools > Script editor...
+Create script file with File > New > Script file
+Copy and paste the contents of ```[main.js](main.js)``` and save.
+ 
+4. Create a new file jsSHA.js and copy the content of https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
+
+5 Create new script file for every API you need
+
+7. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
 
 3. In "Market" tab typing your total deposit in cell **G5**
 
-4. In "Config" tab paste your API key and API secret in cells following next table 
+4. In "Config" tab paste your API key and API secret from broker you use (multiple broker allowed)
 
-|  API       | Key     | Secret  |
-| ---------- | ------- | --------|
-| Binance    | **B14** | **B15** |
-| Bittrex    | **B6**  | **B7**  |
-| Cryptopia  | **B18** | **B19** |
-| Kraken     | **B2**  | **B3**  |
-| Kucoin     | **B22** | **B23** |
-| Poloniex   |         |         |
+### Kraken
+* Log in into your Kraken account and navigate to Settings -> API (https://www.kraken.com/u/settings/api)
+* Create a new key and select in the permissions only Query Ledger Entries and Query Funds
+* Enter the Key in **B2** cell and the Private Key in **B3** cell
 
+### Bittrex
+* Log in into your Bittrex account and navigate to Settings -> API Keys (https://bittrex.com/Manage#sectionApi)
+* Create a new key
+* Enable only READ INFO
+* Click on Update Keys
+* Enter your Key in **B6** cell and your Secret in **B7** cell 
 
-5. Click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
-You need to create with File > New > Script file
+### Poloniex
+* Log in into your Poloniex account, select the Settings icon and click on API KEYS (https://poloniex.com/apiKeys)
+* Please create a new API key for CoinTracking. Do not use an already existing key.
+* Please disable (!!!) both checkboxes Enable Trading and Enable Withdrawals as we do not need them!!!
+* Enter your Key in **B10** and your Secret here in **B11** cell
 
-6. Create a new file jsSHA.js and copy the content from https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
+### Binance
+* Log in into your Binance account and navigate to the Security Settings page (https://www.binance.com/userCenter/createApi.html)
+* Click on 'API Settings' and create a new key
+* Check only the 'Read Info' permission
+* Enter your Key in **B14** cell and your Secret in **B15** cell
 
-7. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
+### Cryptopia
+* Log in into your Cryptopia account and navigate to Settings -> Security (https://www.cryptopia.co.nz/Security)
+* Check the 'Enable API' checkbox and create a 'New Key'
+* Save the changes
+* Enter your Key in **B18** cell and your Secret in **B19** cell
+
+### Kucoin
+* Log in into your KuCoin account and navigate to Settings -> API Keys (https://www.kucoin.com/#/user/setting/api)
+* Click on 'Create'
+* Enter your Key in **B22** cell and your Secret in **B23** cell
+__Warning:__ KuCoin.com does not provide API permissions. All keys have full access to your funds.
+
+### Biffinex
+* Log in into your Bitfinex account and navigate to Account -> API (https://www.bitfinex.com/api)
+* Create a new key
+* Select all Read boxes (should be selected by default) and do not select any Write boxes.
+* Label the API Key and generate it.
+* Enter your Key in **B26** cell and your Secret in **B27** cell
 
 Optional
 ========
