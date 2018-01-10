@@ -23,24 +23,26 @@ Configuration
 
 2. Rename two first tab with "Market" and "Config"
 
-3. In "Config" tab paste your API key and API secret in cells following next table 
+3 In "Market" tab typing your total deposit in cell **G5**
+
+4. In "Config" tab paste your API key and API secret in cells following next table 
 
 |  API       | Key | Secret |
 | ---------- | --- | ----|
-| Binance    | B14 | B15 |
-| Bittrex    | B6  | B7  |
-| Cryptopia  | B18 | B19 |
-| Kraken     | B2  | B3  |
-| Kucoin     | B22 | B23 |
+| Binance    | **B14** | **B15** |
+| Bittrex    | **B6**  | **B7**  |
+| Cryptopia  | **B18** | **B19** |
+| Kraken     | **B2*  | **B3**  |
+| Kucoin     | **B22** | **B23** |
 | Poloniex   |     |     |
 
 
-4. Click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
+5. Click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
 You need to create with File > New > Script file
 Create a new file jsSHA and copy the content from
 https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
 
-5. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
+6. Return to the spreadsheet and refresh the page (Note: actually click the refresh button or select it from the menu; the keyboard shortcut is overriden on Google Sheets, at least in Google Chrome). A couple seconds after the page reloads you should see a "Crypto" menu at the top.
 
 Optional
 ========
