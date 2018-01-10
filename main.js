@@ -160,5 +160,4 @@ ss.getRange(6,10).setValue(earnings/Bitcoin)
 ss.getRange(5,12).setValue(deposit+earnings)
 ss.getRange(5,13).setValue(earnings/deposit)
 ss.getRange(6,12).setValue((earnings+deposit)/Bitcoin)
-
 }
