@@ -73,6 +73,7 @@ https://www.kucoin.com/#/user/setting/api
 * Log in into your KuCoin account and navigate to Settings -> API Keys
 * Click on 'Create'
 * Enter your Key in **B22** cell and your Secret in **B23** cell in **"Config"** tab
+
 __Warning:__ KuCoin.com does not provide API permissions. All keys have full access to your funds.
 
 ### Biffinex
