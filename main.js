@@ -37,9 +37,9 @@ function Balance(data){
   var all = []
   
   var Full_Balance = Kraken()
-  //Full_Balance=AddBalance(Full_Balance, Bittrex())
+  Full_Balance=AddBalance(Full_Balance, Bittrex())
   Full_Balance=AddBalance(Full_Balance, Binance())
-  //Full_Balance=AddBalance(Full_Balance, Cryptopia())
+  Full_Balance=AddBalance(Full_Balance, Cryptopia())
   //Logger.log(Full_Balance);
   //Logger.log(all)
   var all = Full_Balance
