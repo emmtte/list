@@ -27,14 +27,14 @@ Configuration
 
 4. In "Config" tab paste your API key and API secret in cells following next table 
 
-|  API       | Key | Secret |
-| ---------- | --- | ----|
+|  API       | Key     | Secret  |
+| ---------- | ------- | --------|
 | Binance    | **B14** | **B15** |
 | Bittrex    | **B6**  | **B7**  |
 | Cryptopia  | **B18** | **B19** |
-| Kraken     | **B2*  | **B3**  |
+| Kraken     | **B2**  | **B3**  |
 | Kucoin     | **B22** | **B23** |
-| Poloniex   |     |     |
+| Poloniex   |         |         |
 
 
 5. Click Tools > Script editor... then copy and paste the contents of every .js files (see above) into the script editor and save.
