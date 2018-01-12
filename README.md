@@ -8,17 +8,14 @@ Features
 This script create a google sheet with currencies balances extracted from differents broker as
 
 * Binance
+* Bitfinex
 * Bittrex
 * Cryptopia
 * Kraken
-* Bitfinex
+* Kucoin (not yet available)
+* Poloniex
 
 It also gives prices from Coinmarketcap
-
-In future more brokers will be available as
-
-* Kucoin
-* Poloniex
 
 Configuration
 ============
