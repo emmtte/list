@@ -5,7 +5,7 @@ Google Sheet's automatic update with Google Apps Script (GAS) for a cryptocurren
 
 Features
 ========
-This script updates a google sheet with currency balances extracted from differents brokers as
+This script updates a google sheet with currency balances extracted from differents exchanges as
 
 * Binance
 * Bitfinex
@@ -34,7 +34,7 @@ Configuration
 
 See explanations below. 
 
-Note: Multiple brokers are allowed
+Note: Multiple exchanges are allowed
 
 #### Kraken
 https://www.kraken.com/u/settings/api
