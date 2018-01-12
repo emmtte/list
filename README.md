@@ -17,6 +17,7 @@ This script updates a google sheet with currency balances extracted from differe
 
 It also gives prices coming from Coinmarketcap.com
 
+
 Configuration
 ============
 * Go to https://drive.google.com/drive/my-drive and click New > Google Sheets
@@ -29,16 +30,19 @@ Configuration
 * Return to the spreadsheet and refresh the page
 * A couple of seconds after the page's reload you should see a "Crypto" menu at the top.
 * In **"Market"** sheet, enter your total deposit in cell **G5**
-* In **"Config"** sheet, paste your API key and API secret from the broker you want to use. See explanations below. 
+* In **"Config"** sheet, paste your API key and API secret from the broker you want to use.
+
+See explanations below. 
+
 Note: Multiple brokers are allowed
 
-### Kraken
+#### Kraken
 https://www.kraken.com/u/settings/api
 * Log in into your Kraken account and navigate to Settings -> API 
 * Create a new key and select in the permissions only "Query Funds"
 * Enter the Key in **B2** cell and the Private Key in **B3** cell in **"Config"** sheet
 
-### Bittrex
+#### Bittrex
 https://bittrex.com/Manage#sectionApi
 * Log in into your Bittrex account and navigate to Settings -> API Keys 
 * Create a new key
@@ -46,28 +50,28 @@ https://bittrex.com/Manage#sectionApi
 * Click on Update Keys
 * Enter your Key in **B6** cell and your Secret in **B7** cell in **"Config"** sheet
 
-### Poloniex
+#### Poloniex
 https://poloniex.com/apiKeys
 * Log in into your Poloniex account, select the Settings icon and click on API KEYS
 * Please create a new API key. Do not use an already existing key.
 * Please disable (!!!) both checkboxes Enable Trading and Enable Withdrawals as we do not need them!!!
 * Enter your Key in **B10** and your Secret here in **B11** cell in **"Config"** sheet
 
-### Binance
+#### Binance
 https://www.binance.com/userCenter/createApi.html
 * Log in into your Binance account and navigate to the Security Settings page
 * Click on 'API Settings' and create a new key
 * Check only the 'Read Info' permission
 * Enter your Key in **B14** cell and your Secret in **B15** cell in **"Config"** sheet
 
-### Cryptopia
+#### Cryptopia
 https://www.cryptopia.co.nz/Security
 * Log in into your Cryptopia account and navigate to Settings -> Security
 * Check the 'Enable API' checkbox and create a 'New Key'
 * Save the changes
 * Enter your Key in **B18** cell and your Secret in **B19** cell in **"Config"** sheet
 
-### Kucoin
+#### Kucoin
 https://www.kucoin.com/#/user/setting/api
 * Log in into your KuCoin account and navigate to Settings -> API Keys
 * Click on 'Create'
@@ -75,13 +79,14 @@ https://www.kucoin.com/#/user/setting/api
 
 __Warning:__ KuCoin.com does not provide API permissions. All keys have full access to your funds.
 
-### Biffinex
+#### Biffinex
 https://www.bitfinex.com/api
 * Log in into your Bitfinex account and navigate to Account -> API
 * Create a new key
 * Select all Read boxes (should be selected by default) and do not select any Write boxes.
 * Label the API Key and generate it.
 * Enter your Key in **B26** cell and your Secret in **B27** cell in **"Config"** sheet
+
 
 Optional
 ========
@@ -90,6 +95,7 @@ Receive by email a pdf copy of "Market" sheet each hours or when you want :
 * Just add an event in script editor with "current project's triggers" button.
 * Run : convertSpreadsheetToPdf() 
 * Event : Time-driven
+
 
 Donate
 ======
@@ -100,6 +106,7 @@ Cryptocurrency-Portfolio is an open source project. This project is still in pro
 * Litecoin : Lgoz4XUzUiQDAeZHKhNYVv4Yt4CkhB3dVx
 * Dash : XyXSG76aEqjBfn1fcFqbv3ypbMFYHLhFgW
 * Zcash : t1ghGhATN4foYCGdhHFeZE7vULdpWEuvp1N
+
 
 License
 =======
