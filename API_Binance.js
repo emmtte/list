@@ -29,7 +29,7 @@ function Binance () {
   var array = [];
   
   //{balances=[{asset=BTC, free=0.00, locked=0.00}, {asset=LTC, free=0.00, locked=0.00000000},
-  for(var x in data.balances){ balance=parseFloat(data.balances[x].free);
+  for(var x in data.balances){ balance=parseFloat(data.balances[x].free) + parseFloat(data.balances[x].locked);
                                if (balance > 0) {
                                  asset=data.balances[x].asset
                                  if (asset=="IOTA") {asset="MIOTA"}
