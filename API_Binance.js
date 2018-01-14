@@ -1,3 +1,4 @@
+// API_Binance.js V1.1
 // I assume that key and secret API are in the "Config" spreadsheet. The key is in cell B14 and the secret in cell B15
 
 function Binance () {
