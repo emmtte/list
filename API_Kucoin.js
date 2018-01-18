@@ -1,4 +1,4 @@
-// V1.0
+// V1.1
 // I assume that key and secret API are in the "Config" spreadsheet. The key is in cell B22 and the secret in cell B23
 
 function Kucoin () {
@@ -39,8 +39,11 @@ if (balance > 0) {
 var asset = data.data[x].coinType
 
 array.push({'currency': asset, 'balance': balance, 'market': "Kucoin"});
+
+
+}
+
+}
 //Logger.log(array);
 return array
-}
-}
 }
