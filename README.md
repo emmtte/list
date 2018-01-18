@@ -10,9 +10,10 @@ This script updates a google sheet with currency balances extracted from differe
 * Binance
 * Bitfinex
 * Bittrex
+* Bitstamp (not yet available)
 * Cryptopia
 * Kraken
-* Kucoin (not yet available)
+* Kucoin
 * Poloniex
 
 It also gives prices coming from Coinmarketcap.com
@@ -86,6 +87,14 @@ https://www.bitfinex.com/api
 * Select all Read boxes (should be selected by default) and do not select any Write boxes.
 * Label the API Key and generate it.
 * Enter your Key in **B26** cell and your Secret in **B27** cell in **"Config"** sheet
+
+#### Bitstamp
+https://www.bitstamp.net/account/security/api/
+* Log in into your Bitstamp account and select under Security the point API Access 
+* Create a new key and select in the perms only Account balance
+* Activate the generated key
+* Enter your Key in **B30** cell and your Secret in **B31** cell in **"Config"** sheet
+* Enter your Customer ID (displayed under Account) in **B32** cell in **"Config"** sheet
 
 
 Optional
