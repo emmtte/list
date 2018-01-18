@@ -1,3 +1,6 @@
+// API_Bitfinex.js V1.0
+// I assume that key and secret API are in the "Config" spreadsheet. The key is in cell B26 and the secret in cell B27
+    
 function Bitfinex () {
     function bytesToHex(data) {
         return data.map(function(e) {
