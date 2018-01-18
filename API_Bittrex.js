@@ -1,3 +1,4 @@
+//V1.0
 // you need a bittrex API key and secret with read account option enabled
 // I assume that key and secret API are in the "Config" spreadsheet. The key is in cell B6 and the secret in cell B7
 
@@ -29,7 +30,6 @@ function Bittrex(){
   var data = JSON.parse(response.getContentText());
   var array = [];
   //Logger.log(data);
-  // Type du message JSON:
   //{"success":true,"message":"","result":[{"Currency":"ADA","Balance":0.00000000,"Available":0.00000000,"Pending":0.00000000,"CryptoAddress":null},{"Currency":"ARDR",
  
   for(var x in data.result){ array.push({'currency': data.result[x].Currency, 'balance': data.result[x].Balance, 'market': "Bittrex"})
