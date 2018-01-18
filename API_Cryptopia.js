@@ -1,3 +1,4 @@
+//V1.0
 // I assume that key and secret API are in the "Config" spreadsheet. The key is in cell B18 and the secret in cell B19
 
 function Cryptopia () {
@@ -7,23 +8,23 @@ function Cryptopia () {
   var digest = "{}";
 
 var rawHash = Utilities.base64Encode(Utilities.computeDigest(Utilities.DigestAlgorithm.MD5,digest));
-Logger.log(rawHash+"  "+rawHash);
+//Logger.log(rawHash+"  "+rawHash);
 
 url="https://www.cryptopia.co.nz/Api/GetBalance"
 var url_encoded = encodeURIComponent(url).toLowerCase()
-Logger.log(url_encoded);
+//Logger.log(url_encoded);
 
 var nonce = Math.floor(new Date().getTime()/1000);
 
 signature=key+"POST"+url_encoded+nonce+rawHash
-Logger.log("signature "+signature);
+//Logger.log("signature "+signature);
   
 var shaObj = new jsSHA("SHA-256", "TEXT");
 shaObj.setHMACKey(secret, "B64");
 shaObj.update(signature);
 var hmac = shaObj.getHMAC("B64");
 
-Logger.log("signed: "+hmac);
+//Logger.log("signed: "+hmac);
 
 header_value="amx "+key+":"+hmac+":"+nonce
 Logger.log("header_value: "+header_value);
@@ -37,7 +38,7 @@ payload: '{}'
 
 var response = UrlFetchApp.fetch (url, options);
 var data = JSON.parse(response.getContentText());
-Logger.log(data)  
+//Logger.log(data)  
 
 
   var array = [];
@@ -49,6 +50,6 @@ Logger.log(data)
                                  array.push({'currency': asset, 'balance': balance, 'market': "Cryptopia"})
                                } 
                              }
-  Logger.log(array);
+  //Logger.log(array);
   return array;
 }
