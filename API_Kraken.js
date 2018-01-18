@@ -1,3 +1,4 @@
+// V1.0
 // I assume that key and secret API are in the "Config" spreadsheet. The key is in cell B2 and the secret in cell B3
 
 function Kraken () {
@@ -19,9 +20,6 @@ function Kraken () {
     sha512obj.update (path);
     sha512obj.update (hash_digest);
     signature=sha512obj.getHMAC ("B64");
-
-
-
 
     var url = "https://api.kraken.com" + path;
     var options = {
