@@ -17,7 +17,7 @@ function Bitstamp() {
  var shaObj = new jsSHA("SHA-256", "BYTES");
  shaObj.setHMACKey(secret, "BYTES");
  shaObj.update(message);
- var hmac = shaObj.getHMAC("HEX").toString().toUpperCase();;
+ var signature = shaObj.getHMAC("HEX").toString().toUpperCase();;
 
 var url = "http://www.bitstamp.net/api/v2/balance/"
 cb = "key=" + key + "&signature=" + signature + "&nonce=" + nonce;
