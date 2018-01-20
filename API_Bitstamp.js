@@ -1,7 +1,7 @@
 //Need beta users
 //Work in progress
 
-// BETA V0.3
+// BETA V0.4
 // I assume that key and secret API are in the "Config" spreadsheet. The key is in cell B30, the secret in cell B31 and customer_id in B32 cell
 
 function Bitstamp() {
