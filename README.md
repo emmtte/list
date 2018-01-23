@@ -63,6 +63,7 @@ https://www.binance.com/userCenter/createApi.html
 * Log in into your Binance account and navigate to the Security Settings page
 * Click on 'API Settings' and create a new key
 * Check only the 'Read Info' permission
+* Check Unrestricted (Less Secure) in IP Access Restriction
 * Enter your Key in **B14** cell and your Secret in **B15** cell in **"Config"** sheet
 
 #### Cryptopia
