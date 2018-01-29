@@ -29,6 +29,7 @@ Without the ready template
 * Go to https://drive.google.com/drive/my-drive and click New > Google Sheets
 * Rename the two first sheets with "Market" and "Config"
 
+
 * Click Tools > Script editor...
   Create a script file using File > New > Script file
   Copy and paste the contents of ```main.js``` and save.
