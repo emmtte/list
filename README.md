@@ -26,7 +26,7 @@ It also gives prices coming from Coinmarketcap.com
 
 #### Without template
 * Go to https://drive.google.com/drive/my-drive and click New > Google Sheets
-* Rename the two first sheets with "Market" and "Config"
+* Rename the two first sheets with **"Market"** and **"Config"**
 
 #### Next Steps
 * Click Tools > Script editor...
