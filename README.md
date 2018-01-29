@@ -1,10 +1,10 @@
-# Cryptocurrency-Portfolio
+## Cryptocurrency-Portfolio
 Google Sheet's automatic update with Google Apps Script (GAS) for a cryptocurrency portfolio
 
 ![img](sample.png)
 
-Features
-========
+### Features
+
 This script updates a google sheet with currency balances extracted from differents exchanges as
 
 * Binance
@@ -19,17 +19,16 @@ This script updates a google sheet with currency balances extracted from differe
 It also gives prices coming from Coinmarketcap.com
 
 
-Configuration
-============
-With the ready template
+### Configuration
+#### With the ready template
 * Go to https://docs.google.com/spreadsheets/d/1UvUOEjSXonikKCIstZ065FXniVo8UH6_LqJNOnqLwEg
 * Click File > Create a copy and rename it
 
-Without the ready template
+#### Without template
 * Go to https://drive.google.com/drive/my-drive and click New > Google Sheets
 * Rename the two first sheets with "Market" and "Config"
 
-
+#### Next Steps
 * Click Tools > Script editor...
   Create a script file using File > New > Script file
   Copy and paste the contents of ```main.js``` and save.
@@ -105,8 +104,7 @@ https://www.bitstamp.net/account/security/api/
 * Enter your Customer ID (displayed under Account) in **B32** cell in **"Config"** sheet
 
 
-Optional
-========
+### Optional
 
 Receive by email a pdf copy of "Market" sheet each hours or when you want :
 * Just add an event in script editor with "current project's triggers" button.
@@ -114,8 +112,8 @@ Receive by email a pdf copy of "Market" sheet each hours or when you want :
 * Event : Time-driven
 
 
-Donate
-======
+### Donate
+
 Cryptocurrency-Portfolio is an open source project. This project is still in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Dash.
 
 * Bitcoin : 12syztqo8HsvmrXFMJovpPKk5p7GhuLDkX
@@ -125,8 +123,7 @@ Cryptocurrency-Portfolio is an open source project. This project is still in pro
 * Zcash : t1ghGhATN4foYCGdhHFeZE7vULdpWEuvp1N
 
 
-License
-=======
+### License
 
 MIT License
 
