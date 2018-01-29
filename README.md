@@ -21,8 +21,14 @@ It also gives prices coming from Coinmarketcap.com
 
 Configuration
 ============
+With the ready template
+* Go to https://docs.google.com/spreadsheets/d/1UvUOEjSXonikKCIstZ065FXniVo8UH6_LqJNOnqLwEg
+* Click File > Create a copy and rename it
+
+Without the ready template
 * Go to https://drive.google.com/drive/my-drive and click New > Google Sheets
 * Rename the two first sheets with "Market" and "Config"
+
 * Click Tools > Script editor...
   Create a script file using File > New > Script file
   Copy and paste the contents of ```main.js``` and save.
