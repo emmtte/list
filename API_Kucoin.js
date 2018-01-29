@@ -29,21 +29,16 @@ function Kucoin () {
     }
  }
 
- var jsondata = UrlFetchApp.fetch(url, options);
- var data   = JSON.parse(jsondata.getContentText());
- //Logger.log(data);
+var jsondata = UrlFetchApp.fetch(url, options);
+var data   = JSON.parse(jsondata.getContentText());
+var array = [];
 // {msg=Operation succeeded., code=OK, data=[{coinType=KCS, balance=0, freezeBalanceStr=0.0, balanceStr=0.0, freezeBalance=0}, {coinType=XRB, balance=0, freezeBalanceStr=0.0, balanceStr=0.0, freezeBalance=0},
 for(var x in data.data){
 var balance = parseFloat(data.data[x].balance);
-if (balance > 0) {
-var asset = data.data[x].coinType
-
-array.push({'currency': asset, 'balance': balance, 'market': "Kucoin"});
-
-
+  if (balance > 0) {
+    var asset = data.data[x].coinType
+    array.push({'currency': asset, 'balance': balance, 'market': "Kucoin"});
+  }
 }
-
-}
-//Logger.log(array);
 return array
 }
