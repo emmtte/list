@@ -1,7 +1,7 @@
 //Need beta users
 //Work in progress
 
-// BETA V0.4
+// BETA V0.5
 // I assume that key and secret API are in the "Config" spreadsheet. The key is in cell B30, the secret in cell B31 and customer_id in B32 cell
 
 function Bitstamp() {
@@ -17,9 +17,9 @@ function Bitstamp() {
  var shaObj = new jsSHA("SHA-256", "BYTES");
  shaObj.setHMACKey(secret, "BYTES");
  shaObj.update(message);
- var signature = shaObj.getHMAC("HEX").toString().toUpperCase();;
+ var signature = shaObj.getHMAC("HEX").toString().toUpperCase();
 
-var url = "http://www.bitstamp.net/api/v2/balance/"
+var url = "http://www.bitstamp.net/api/balance/"
 cb = "key=" + key + "&signature=" + signature + "&nonce=" + nonce;
 
 //var options = { method: 'post' };
