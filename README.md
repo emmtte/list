@@ -37,12 +37,12 @@ It also gives prices coming from Coinmarketcap.com
 * Return to the spreadsheet and refresh the page
 * A couple of seconds after the page's reload you should see a **"Crypto Tools"** menu at the top (on the right of Help menu)
 * In **"Market"** sheet, enter your total deposit in cell **G5**
-* In **"Config"** sheet, paste your API key and API secret from the broker you want to use (See explanations below **API Exchanges configuration** for every exchanges)
+* In **"Config"** sheet, paste your API key and API secret from the exchange you want to use (See explanations below **API Exchange configuration** for each exchange)
 * Click on **"Crypto Tools"** and **"Update Portfolio"** to see your personnal crypto portfolio
 
 Note: Multiple exchanges are allowed
 
-### API Exchanges configuration 
+### API Exchange configuration 
 #### Kraken
 https://www.kraken.com/u/settings/api
 * Log in into your Kraken account and navigate to Settings -> API 
