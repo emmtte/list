@@ -19,7 +19,7 @@ This script updates a google sheet with currency balances extracted from differe
 It also gives prices coming from Coinmarketcap.com
 
 
-### Configuration
+### Installation
 #### With the ready template
 * Go to https://docs.google.com/spreadsheets/d/1UvUOEjSXonikKCIstZ065FXniVo8UH6_LqJNOnqLwEg
 * Click File > Create a copy and rename it
