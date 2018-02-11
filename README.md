@@ -35,7 +35,7 @@ It also gives prices coming from Coinmarketcap.com
 * Create a new file jsSHA.js and copy the content of https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
 * Create a new script file for each API brokers you need
 * Return to the spreadsheet and refresh the page
-* A couple of seconds after the page's reload you should see a **"Crypto Tools"** menu at the top (on the right of Help Menu).
+* A couple of seconds after the page's reload you should see a **"Crypto Tools"** menu at the top (on the right of Help menu).
 * Click on it and **"Update Portfolio"**
 * In **"Market"** sheet, enter your total deposit in cell **G5**
 * In **"Config"** sheet, paste your API key and API secret from the broker you want to use.
