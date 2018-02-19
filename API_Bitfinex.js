@@ -37,6 +37,7 @@ function Bitfinex () {
       asset=data[x][1]
       if (asset=="IOT") {asset="MIOTA"}
       if (asset=="QSH") {asset="QASH"}
+      if (asset=="DAT") {asset="DATA"}
       array.push({'currency': asset, 'balance': balance, 'market': "Bitfinex"})}
     } 
   
