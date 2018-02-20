@@ -1,4 +1,4 @@
-// API_Bitfinex.js V1.0
+// API_Bitfinex.js
 // I assume that key and secret API are in the "Config" spreadsheet. The key is in cell B26 and the secret in cell B27
     
 function Bitfinex () {
@@ -38,6 +38,8 @@ function Bitfinex () {
       if (asset=="IOT") {asset="MIOTA"}
       if (asset=="QSH") {asset="QASH"}
       if (asset=="DAT") {asset="DATA"}
+      if (asset=="SPK") {asset="SPANK"}
+      if (asset=="MNA") {asset="MANA"}
       array.push({'currency': asset, 'balance': balance, 'market': "Bitfinex"})}
     } 
   
