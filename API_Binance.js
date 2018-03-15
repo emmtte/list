@@ -34,7 +34,6 @@ function Binance () {
   for(var x in data.balances){ balance=parseFloat(data.balances[x].free) + parseFloat(data.balances[x].locked);
                                if (balance > 0) {
                                  asset=data.balances[x].asset
-                                 if (asset=="NANO") {asset="XRB"}
                                  if (asset=="IOTA") {asset="MIOTA"}
                                  if (asset=="YOYO") {asset="YOYOW"}
                                  if ((asset!="BCD") & (asset!="BCX") & (asset!="SBTC") & (asset!="BTG")) {
