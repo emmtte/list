@@ -1,7 +1,7 @@
 ## Cryptocurrency-Portfolio
 Google Sheet's automatic update with Google Apps Script (GAS) for a cryptocurrency portfolio
 
-![img](sample.png)
+![img](screenshot.png)
 
 ### Features
 
@@ -38,6 +38,8 @@ It also gives prices coming from Coinmarketcap.com
 * A couple of seconds after the page's reload you should see a **"Crypto Tools"** menu at the top (on the right of Help menu)
 * In **"Market"** sheet, enter your total deposit in cell **G5**
 * In **"Config"** sheet, paste your API key and API secret from the exchange you want to use (See explanations below **API Exchange configuration** for each exchange)
+* Choose your fiat ($ or €) in cell **I3**
+* Enter your total deposit in cell **G3**
 * Click on **"Crypto Tools"** and **"Update Portfolio"** to see your personnal crypto portfolio
 
 Note: Multiple exchanges are allowed
