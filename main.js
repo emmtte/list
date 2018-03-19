@@ -1,5 +1,3 @@
-//version 0.23
-
 function onOpen() {
   var sheet = SpreadsheetApp.getActiveSpreadsheet();
   var entries = [{ name : "Update Portfolio", functionName : "Balance" }];
@@ -7,8 +5,7 @@ function onOpen() {
 };
 
 function coinmarketcap() {
-var url = "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=300";
-//var url = "https://api.coinmarketcap.com/v1/ticker/?convert=EUR";
+var url = "https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=400";
 var response = UrlFetchApp.fetch(url);
 var text = response.getContentText();
 var obj_array = JSON.parse(text);
@@ -16,7 +13,7 @@ return obj_array;
 }
 
 function searchcoin(symbol, myArray) {
-  var err= {symbol: symbol, name: "???????", rank: "-", market_cap_eur: "0",price_btc: "0",price_eur: "0",percent_change_1h: "0",percent_change_24h: "0",percent_change_7d: "0"}
+  var err= {symbol: symbol, name: "???????", rank: "-", market_cap_eur: "0",price_btc: "0",price_eur: "0",price_usd: "0",percent_change_1h: "0",percent_change_24h: "0",percent_change_7d: "0"}
   if (symbol == "BQX") {symbol="ETHOS"}
   if (symbol == "CMT") {for (var i=0; i < myArray.length; i++) {if (myArray[i].id == "cybermiles") {return myArray[i];}}}
   for (var i=0; i < myArray.length; i++) {if (myArray[i].symbol == symbol) {return myArray[i];}}
@@ -28,7 +25,6 @@ outerloop:
 for (var i = 0; i < Broker_Balance.length; i++) {
   for (var j = 0; j < Full_Balance.length; j++) {
     if (Full_Balance[j].currency === Broker_Balance[i].currency){
-      //Logger.log(Full_Balance[j].currency+" double");
       Full_Balance[j].balance=Full_Balance[j].balance+Broker_Balance[i].balance
       Full_Balance[j].market=Full_Balance[j].market+"\n"+Broker_Balance[i].market+" : "+Broker_Balance[i].balance
       continue outerloop;
@@ -39,13 +35,15 @@ for (var i = 0; i < Broker_Balance.length; i++) {
 return Full_Balance
 }
 
-
 function Balance(data){
      
   var Balance = [];
   
   var market = [];
   market = coinmarketcap()
+  Bitcoin=searchcoin("BTC",market)
+  Bitcoin_EUR=Bitcoin.price_eur
+  Bitcoin_USD=Bitcoin.price_usd
   
   var all = []
   
@@ -58,32 +56,28 @@ function Balance(data){
   if (!cfg.getRange("B18").isBlank()) {Full_Balance=AddBalance(Full_Balance, Cryptopia())}
   if (!cfg.getRange("B22").isBlank()) {Full_Balance=AddBalance(Full_Balance, Kucoin())}
   if (!cfg.getRange("B26").isBlank()) {Full_Balance=AddBalance(Full_Balance, Bitfinex())}
+  if (!cfg.getRange("B30").isBlank()) {Full_Balance=AddBalance(Full_Balance, Bitstamp())}
   var all = Full_Balance
   
-  Bitcoin=searchcoin("BTC",market).price_eur
+   
   var coin = []
    
   var wallet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Wallet");
  
-  
-
- //SpreadsheetApp.getActiveSpreadsheet().setSpreadsheetLocale('en_US');
   var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Market");
   TotalAllEUR = 0; TotalCoinEUR = 0;
   ss.setFrozenRows(9);
   
-  ss.getRange('A10:T100').clearContent();
-  ss.getRange('A10:T100').clearNote();
+  ss.getRange('A10:N100').clearContent();
+  ss.getRange('A10:N100').clearNote();
   
-  ss.getRange("B9:L9").setValues([['#','Symbol','Name','€','BTC','H','D','W','Balance','Total','%']]);
-  ss.getRange("E10:E").setNumberFormat("0.00€");
-  ss.getRange("F10:F").setNumberFormat("0.00000000");
-  ss.getRange("G10:I").setNumberFormat("0.00%;0.00%");
-  //ss.getRange("J10:J").setNumberFormat("?.??");
-  ss.getRange("K10:K").setNumberFormat("0.00€");
-  ss.getRange("L10:L").setNumberFormat("0.00%;0.00%");
+  TotalCoin = 0
+  for (var i = 0; i < all.length; i++) {
+  var bal = all[i].balance
+  coin=searchcoin(all[i].currency,market)
+  TotalCoin = TotalCoin + parseFloat(bal)*parseFloat(coin.price_usd)
+  }
   
-   
   var a=9
   for (var i = 0; i < all.length; i++) {
    
@@ -97,7 +91,7 @@ function Balance(data){
       //D ==> Name
       ss.getRange(a,4).setValue(coin.name); // Name
       //E ==> Price EUR
-      ss.getRange(a,5).setValue(parseFloat(coin.price_eur)); // Price (EUR)
+      ss.getRange(a,5).setValue(parseFloat(coin.price_usd)); // Price (USD)
       //F ==> Price BTC
       ss.getRange(a,6).setValue(parseFloat(coin.price_btc)); // Price (BTC)
       //G ==> % H
@@ -110,54 +104,103 @@ function Balance(data){
       if (bal === parseInt(bal)) {ss.getRange(a,10).setNumberFormat("0")} else {ss.getRange(a,10).setNumberFormat("0.##")}
       ss.getRange(a,10).setValue(bal); // Balance
       ss.getRange(a,10).setNotes([[all[i].market]])
-      //K ==> Total EUR
+      //L ==> Total EUR
+      TotalCoinUSD = parseFloat(bal)*parseFloat(coin.price_usd)
+      ss.getRange(a,12).setValue(TotalCoinUSD); // Total (USD) 
+      //M ==> % coin
       TotalCoinEUR = parseFloat(bal)*parseFloat(coin.price_eur)
-      ss.getRange(a,11).setValue(TotalCoinEUR); // Total (EUR) 
-      //L ==> % coin
-      TotalAllEUR += TotalCoinEUR
-      //.getRange("J5").getValue()
+      ss.getRange(a,13).setValue(TotalCoinEUR); // Total (EUR)
+      //K ==> % coin
+      TotalCoinUSD / TotalCoin
+      ss.getRange(a,11).setValue(TotalCoinUSD/TotalCoin); // % total
 }
 
   
-// Do Strategy and Total
+// Total
 var Portfolio = [];
-// var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Market"); 
-// a revoir les deux lignes suivantes car les donnes sont connus plus haut
-var solde = ss.getRange(10, 1, ss.getLastRow()-9, ss.getLastColumn()).getValues();
-solde.forEach(function(result) {Portfolio.push({'position':result[1], 'symbol':result[2], 'balance':result[9], 'total':result[10]})});
-//Logger.log(Portfolio);
-euros=0; total = 0; step_1 = 0; step_2 = 0; step_3 = 0; step_4 = 0
 
+var solde = ss.getRange(10, 1, ss.getLastRow()-9, ss.getLastColumn()).getValues();
+solde.forEach(function(result) {Portfolio.push({'position':result[1], 'symbol':result[2], 'balance':result[9], 'total_usd':result[11],'total_eur':result[12]})});
+//Logger.log(Portfolio);
+euros=0; total = 0;
+total_EUR=0; total_USD=0
 for (var i = 0; i < Portfolio.length; i++) {
   if (Portfolio[i].symbol == "EUR") {euros=parseFloat(Portfolio[i].balance)}
-  if (Portfolio[i].position <= 5) {step_1+=parseFloat(Portfolio[i].total)}
-  if (Portfolio[i].position >= 6 && Portfolio[i].position <= 30) {step_2+=parseFloat(Portfolio[i].total)}
-  if (Portfolio[i].position >= 31) {step_3+=parseFloat(Portfolio[i].total)}
-  total += parseFloat(Portfolio[i].total)}
+  total_EUR += parseFloat(Portfolio[i].total_eur)
+  total_USD += parseFloat(Portfolio[i].total_usd)
+  }
 
 //ligne,colonne
 //Deposit
-var deposit=ss.getRange("G5").getValue()
-ss.getRange("G6").setValue(deposit/Bitcoin)
+if (ss.getRange("I3").getValue() == "€") {FIAT="EUR"}
+if (ss.getRange("I3").getValue() == "$") {FIAT="USD"}
+
+deposit=ss.getRange("G3").getValue();
+
+//ss.getRange("G5").setValue(deposit_USD*Bitcoin_EUR/Bitcoin_USD)}
+//if (!ss.getRange("G5").isBlank()) {
+//deposit_USD=ss.getRange("G5").getValue();
+//ss.getRange("G4").setValue(deposit_USD*Bitcoin_USD/Bitcoin_EUR)}
+
+if (FIAT == "EUR") {ss.getRange("G4").setValue(deposit/Bitcoin_EUR)}
+if (FIAT == "USD") {ss.getRange("G4").setValue(deposit/Bitcoin_USD)}
 
 //Cryptos
-ss.getRange(5,2).setValue(total)
-ss.getRange(5,4).setValue(total/(total+euros))
-ss.getRange(6,2).setValue(total/Bitcoin)
+if (FIAT=="EUR") {
+ss.getRange("B3").setValue(total_EUR)
+ss.getRange("D3").setValue(total_EUR/(total_EUR+deposit))
+ss.getRange("B4").setValue(total_EUR/Bitcoin_EUR)
+ss.getRange("B3").setNumberFormat("0€")
+}
+if (FIAT=="USD") {
+ss.getRange("B3").setValue(total_USD)
+ss.getRange("D3").setValue(total_USD/(total_USD+deposit))
+ss.getRange("B4").setValue(total_USD/Bitcoin_USD)
+ss.getRange("B3").setNumberFormat("0$")
+}
 
 //Euros
-ss.getRange(5,5).setValue(euros)
-ss.getRange(5,6).setValue(euros/(total+euros))
-ss.getRange(6,5).setValue(euros/Bitcoin)
+if (FIAT=="EUR") {
+ss.getRange("E3").setValue(euros)
+ss.getRange("F3").setValue(euros/(total_EUR+euros))
+ss.getRange("E4").setValue(euros/Bitcoin_EUR)
+ss.getRange("E3").setNumberFormat("0€")
+}
+if (FIAT=="USD") {
+ss.getRange("E3").setValue(euros)
+ss.getRange("F3").setValue(euros/(total_USD+euros))
+ss.getRange("E4").setValue(euros/Bitcoin_USD)
+ss.getRange("E3").setNumberFormat("0$")
+}
 
 //Gains
-var earnings=euros+total-deposit
-ss.getRange(5,10).setValue(earnings)
-ss.getRange(5,11).setValue(earnings/(deposit+euros))
-ss.getRange(6,10).setValue(earnings/Bitcoin)
+if (FIAT=="EUR") {
+var earnings=euros+total_EUR-deposit
+ss.getRange("J3").setValue(earnings)
+ss.getRange("K3").setValue(earnings/deposit)
+ss.getRange("J4").setValue(earnings/Bitcoin_EUR)
+ss.getRange("J3").setNumberFormat("0€")
+}
+if (FIAT=="USD") {
+var earnings=euros+total_USD-deposit
+ss.getRange("J3").setValue(earnings)
+ss.getRange("K3").setValue(earnings/deposit)
+ss.getRange("J4").setValue(earnings/Bitcoin_USD)
+ss.getRange("J3").setNumberFormat("0$")
+}
 
 //Total
-ss.getRange(5,12).setValue(deposit+earnings)
-ss.getRange(5,13).setValue(earnings/deposit)
-ss.getRange(6,12).setValue((earnings+deposit)/Bitcoin)
+if (FIAT=="EUR") {
+ss.getRange("L3").setValue(deposit+earnings)
+ss.getRange("M3").setValue(earnings/deposit)
+ss.getRange("L4").setValue((earnings+deposit)/Bitcoin_EUR)
+ss.getRange("L3").setNumberFormat("0€")
+}
+if (FIAT=="USD") {
+ss.getRange("L3").setValue(deposit+earnings)
+ss.getRange("M3").setValue(earnings/deposit)
+ss.getRange("L4").setValue((earnings+deposit)/Bitcoin_USD)
+ss.getRange("L3").setNumberFormat("0$")
+}
+
 }
