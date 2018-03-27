@@ -33,14 +33,13 @@ It also gives prices coming from Coinmarketcap.com
   Create a script file using File > New > Script file
   Copy and paste the contents of ```main.js``` and save.
 * Create a new file jsSHA.js and copy the content of https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
-* Create a new script file for each API brokers you need
-* Return to the spreadsheet and refresh the page
+* Create a new script file for each API exchanges you need
+* Return to the spreadsheet
+* In **"Market"** sheet, choose your fiat ($ or €) in cell **I3** and enter your total deposit in cell **G3**
+* In **"Config"** sheet, paste your API key and API secret from the exchanges you want to use (See explanations below **API Exchange configuration** for each exchange)
+* Reload the page
 * A couple of seconds after the page's reload you should see a **"Crypto Tools"** menu at the top (on the right of Help menu)
-* In **"Market"** sheet, enter your total deposit in cell **G5**
-* In **"Config"** sheet, paste your API key and API secret from the exchange you want to use (See explanations below **API Exchange configuration** for each exchange)
-* Choose your fiat ($ or €) in cell **I3**
-* Enter your total deposit in cell **G3**
-* Click on **"Crypto Tools"** and **"Update Portfolio"** to see your personnal crypto portfolio
+* Click on **"Crypto Tools"** and **"Update Portfolio"** to see your updated personnal crypto portfolio
 
 Note: Multiple exchanges are allowed
 
