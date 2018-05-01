@@ -10,7 +10,7 @@ This script updates a google sheet with currency balances extracted from differe
 * Binance
 * Bitfinex
 * Bittrex
-* Bitstamp (work in progress, need beta users)
+* Bitstamp
 * Cryptopia
 * Kraken
 * Kucoin
