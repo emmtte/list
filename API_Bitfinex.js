@@ -40,6 +40,7 @@ function Bitfinex () {
       if (asset=="DAT") {asset="DATA"}
       if (asset=="SPK") {asset="SPANK"}
       if (asset=="MNA") {asset="MANA"}
+      if (asset=="DSH") {asset="DASH"}        
       array.push({'currency': asset, 'balance': balance, 'market': "Bitfinex"})}
     } 
   
