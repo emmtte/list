@@ -14,6 +14,7 @@ return obj_array;
 
 function searchcoin(symbol, myArray) {
   var err= {symbol: symbol, name: "???????", rank: "-", market_cap_eur: "0",price_btc: "0",price_eur: "0",price_usd: "0",percent_change_1h: "0",percent_change_24h: "0",percent_change_7d: "0"}
+  if (symbol == "USD") {symbol="USDT"} // temorary fix issue #35
   if (symbol == "BQX") {symbol="ETHOS"}
   if (symbol == "CMT") {for (var i=0; i < myArray.length; i++) {if (myArray[i].id == "cybermiles") {return myArray[i];}}}
   for (var i=0; i < myArray.length; i++) {if (myArray[i].symbol == symbol) {return myArray[i];}}
@@ -59,10 +60,7 @@ function Balance(data){
   if (!cfg.getRange("B30").isBlank()) {Full_Balance=AddBalance(Full_Balance, Bitstamp())}
   var all = Full_Balance
   
-   
   var coin = []
-   
-  var wallet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Wallet");
  
   var ss = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Market");
   TotalAllEUR = 0; TotalCoinEUR = 0;
