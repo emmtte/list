@@ -35,10 +35,9 @@ function Binance () {
                                if (balance > 0) {
                                  asset=data.balances[x].asset
                                  if (asset=="YOYO") {asset="YOYOW"}
-                                 if (asset=="BCC") {asset="BCH"}
                                  if (asset=="IOTA") {asset="MIOTA"}
                                  if (asset=="BCHSV") {asset="BSV"}
-                                 if (asset=="CHABC") {asset="BCHABC"}
+                                 if (asset=="BCHABC") {asset="BCH"}
                                  array.push({'currency': asset, 'balance': balance, 'market': "Binance"})
                                } 
                              }
