@@ -32,7 +32,7 @@ It also gives prices coming from Coinmarketcap.com
 * Click Tools > Script editor...
   Create a script file using File > New > Script file
   Copy and paste the contents of ```main.js``` and save.
-* Create a new file jsSHA.js and copy the content of https://github.com/Caligatio/jsSHA/blob/master/src/sha.js
+* Create a new file jsSHA.js and copy the content of https://github.com/Caligatio/jsSHA/blob/master/dist/sha.js
 * Create a new script file for each API exchanges you need
 * Return to the spreadsheet
 * In **"Market"** sheet, choose your fiat ($ or €) in cell **I3** and enter your total deposit in cell **G3**
@@ -113,22 +113,11 @@ Receive by email a pdf copy of "Market" sheet each hours or when you want :
 * Event : Time-driven
 
 
-### Donate
-
-Cryptocurrency-Portfolio is an open source project. This project is still in progress. To support development, you can donate using Bitcoin, Ethereum, Litecoin or Dash.
-
-* Bitcoin : 12syztqo8HsvmrXFMJovpPKk5p7GhuLDkX
-* Ethereum : 0xdea14f3a96d88e34b31ba7d0eb11d5dd7b3818b8
-* Litecoin : Lgoz4XUzUiQDAeZHKhNYVv4Yt4CkhB3dVx
-* Dash : XyXSG76aEqjBfn1fcFqbv3ypbMFYHLhFgW
-* Zcash : t1ghGhATN4foYCGdhHFeZE7vULdpWEuvp1N
-
-
 ### License
 
 MIT License
 
-Copyright (c) August 2017 Emmanuel CHARETTE
+Copyright (c) August 2017-2021
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
